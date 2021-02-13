@@ -1,0 +1,6 @@
+applications:
+- buildpack: python_buildpack
+  name: Game-of-life
+  memory: 64MB
+  disk_quota: 256M  
+  command: python server.py

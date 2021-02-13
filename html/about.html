@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O grze</title>
+    <link rel="icon" type="image/png" href="../pics/favicon/favicon.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <script src="../js/navbar.js"></script>
+
+    <div class="gradient">
+      <!-- Górny pasek nawigacji -->
+      <div class="navbar"></div>
+
+      <div class="aboutContainer">
+        <div class="content">
+          <figure>
+            <img src="../pics/aboutPage/conway.jpg" alt="John Horton Conway" />
+            <figcaption>
+              <p class="figcap">John Conway (1937 - 2020)</p>
+            </figcaption>
+          </figure>
+          <br />
+          <p>
+            Gra w życie (ang. Game Of Life) – jest przykładem automatu
+            komórkowego wymyślonego w 1970r. przez brytyjskiego matematyka Johna
+            Conwaya.
+          </p>
+          <br />
+          <p>
+            Conway zainspirowany m.in. pracami polsko-amerykańskiego matematyka
+            Stanisława Ulama (współtwórcy amerykańskiej bomby jądrowej) oraz
+            układami sąsiadów i regułami zmian, eksperymentował nad stworzeniem
+            tego typu automatu pod koniec lat 60. XX wieku.
+          </p>
+          <br />
+          <p>
+            Reguły gry, z którymi spotykamy się obecnie zostały wybrane jako
+            odpowiednie, gdyż zapewniały równowagę pomiędzy zbyt szybkim
+            rozrastaniem się struktur i zbyt wolnym pojawianiem się szybko
+            znikających obiektów.
+          </p>
+        </div>
+        <div class="content">
+          <figure>
+            <img src="../pics/aboutPage/ulam.jpg" alt="Stanisław Ulam" />
+            <figcaption>
+              <p class="figcap">Stanisław Ulam (1909 - 1984)</p>
+            </figcaption>
+          </figure>
+
+          <br />
+          <p>
+            Gra nie posiada graczy w znaczeniu dosłownym – użytkownik jedynie
+            ustawia początkowy stan automatu i obserwuje jego rozwój. Dalsze
+            dane od użytkownika nie są wymagane.
+            <br /><br />
+            Gra w życie może wykonywać obliczenia i z racji, że spełnia
+            kompletność Turinga może zasymulować uniwersalny konstruktor von
+            Neumanna (czyli samoreplikującą się maszynę w środowisku automatu
+            komórkowego) czy każdą inną maszynę Turinga.
+            <br /><br />
+            Zasady gry wraz z symulacją znajdują się w sekcji
+            <a href="simulate.html" id="linkSimulate">Symulacja</a>.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

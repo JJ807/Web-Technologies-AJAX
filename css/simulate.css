@@ -1,0 +1,93 @@
+/*Cellular Automaton*/
+table {
+  background-color: whitesmoke;
+}
+
+td {
+  border: 1px solid #585858;
+  width: 12px;
+  height: 12px;
+}
+
+td.martwa {
+  background-color: transparent;
+}
+
+td.zywa {
+  background-color:  #ff9900;
+}
+
+/*Kroki gry*/
+#headers {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/*Kontener z napisami*/
+.headersContainer {
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*Kontener z gra*/
+.maxWidthContainer {
+  max-width: 850px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.gameContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.gameContainer__board {
+  flex: 1 1 auto;
+}
+
+.gameContainer__panel {
+  flex: 0 1 35%;
+}
+
+/*Przyciski*/
+.gameButtonContainer {
+  text-align: center;
+}
+
+.gameButtons {
+  margin: 5px 0px;
+  min-width: 235px;
+  background-color: #f59c28;
+  font-weight: bold;
+  border: 2px solid black;
+  border-radius: 5px;
+  color: black;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.4s;
+}
+
+.gameButtons:hover {
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+/*Wykres kolowy*/
+#kolo {
+  height: 200px;
+  transform: rotate(-90deg);
+}
+
+#koloPodpisy {
+  text-align: center;
+  height: 30px;
+  width: 200px;
+  transform: translate(25%, 10%);
+}
+
+.koloITytul {
+  text-align: center;
+}

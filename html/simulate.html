@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symulacja</title>
+    <link rel="icon" type="image/png" href="../pics/favicon/favicon.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/simulate.css" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/game.js"></script>
+    <script src="../js/navbar.js"></script>
+  </head>
+  <body>
+    <div class="gradient">
+      <!-- Górny pasek nawigacji -->
+      <div id="myTopnav" class="navbar"></div>
+
+      <!-- Zasady gry -->
+      <div class="aboutContainer">
+        <div class="content">
+          <div class="flexContainer flexContainer--centered">
+            <article class="zasadyGry">
+              <h1>Ogólne zasady gry:</h1>
+              <ul>
+                <li>
+                  Gra rozgrywa się na nieskończonej planszy (płaszczyźnie),
+                  która podzielona jest na kwadratowe komórki <br />(w naszym
+                  przykładzie plansza ma ograniczony rozmiar 40 x 40).
+                </li>
+                <li>
+                  Każda komórka ma 8 sąsiadów - jest to tzw. sąsiedztwo
+                  Moore’a*.
+                </li>
+                <li>
+                  Każda komórka może znajdować się w jednym z dwóch stanów –
+                  może być „żywa” (ang. alive) albo „martwa” (ang. dead).
+                </li>
+                <li>
+                  Stany komórek zmieniają się w wyznaczonej jednostce czasu.
+                </li>
+                <li>
+                  Stan wszystkich komórek w danej jednostce czasu jest
+                  wykorzystywany do obliczenia stanu wszystkich komórek w
+                  następnej jednostce.
+                </li>
+                <li>
+                  Po obliczeniu wszystkie komórki zmieniają swój stan dokładnie
+                  w tym samym momencie.
+                </li>
+                <li>
+                  Stan komórki zależy jedynie od liczby jej
+                  <b><i>żywych</i></b> sąsiadów.
+                </li>
+              </ul>
+              <p>
+                <img
+                  src="../pics/simulatePage/sasiedztwo.svg"
+                  alt="Sasiedztwo Moore'a"
+                  style="height: 100px; width: 100px"
+                />
+                *sąsiedztwo Moore’a - czyli zbiór ośmiu komórek, które otaczają
+                komórkę centralną. Sąsiadem będzie zatem każda komórka
+                granicząca z centralną komórką krawędzią bądź wierzchołkiem.
+                <br />Do tego sąsiedztwa nie należy komórka centralna.
+              </p>
+            </article>
+          </div>
+        </div>
+
+        <div class="content">
+          Istnieje kilka wzorców reguł generowania następnych pokoleń komórek,
+          jednakże najbardziej rozpowszechnione są reguły wymyślone przez
+          Conwaya.
+        </div>
+
+        <div class="content">
+          <h3>Reguły gry według Conwaya mówią, iż:</h3>
+          <ul>
+            <li>
+              <b
+                >każda martwa komórka, która ma dokładnie 3 żywych sąsiadów,
+                staje się żywa w następnej jednostce czasu („rodzi się”),<br
+              /></b>
+            </li>
+
+            <li>
+              <b
+                >każda żywa komórka z 2 lub 3 żywymi sąsiadami pozostaje nadal
+                żywa, lecz przy innej liczbie sąsiadów umiera (z tzw.
+                „samotności” lub „zatłoczenia”).</b
+              >
+            </li>
+          </ul>
+        </div>
+
+        
+      </div>
+
+      <!-- Siatka z komorkami -->
+      <div class="maxWidthContainer">
+        <div class="content">
+          <div class="headersContainer">
+            <div id="headers">
+              <ol>
+                <li>
+                  <p>Kliknij na komórki, aby oznaczyć je jako żywe.<br /><br /></p>
+                </li>
+                <li>
+                  <p>
+                    Kliknij przycisk "Rozpocznij reprodukcję" aby rozpocząć grę.
+                  </p>
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="gameContainer">
+            
+            <div class="gameContainer__board flexContainer--column">
+              <div class="flexContainer--centered">
+                <div class="game" id="swiat"></div>
+              </div>
+            </div>
+
+            <!-- Informacje o stanie gry -->
+            <div class="gameContainer__panel flexContainer--column">
+              <div class="flexContainer--centered">
+                <div>
+                  <p><b>Liczba iteracji: </b><span id="lIteracji">0</span></p>
+                  <p>
+                    <b>Liczba żywych komórek: </b
+                    ><span id="lZywychKomorek">0</span>
+                  </p>
+                  <p>
+                    <b>Liczba martwych komórek: </b>
+                    <span id="lMartwychKomorek">1600</span>
+                  </p>
+                </div>
+
+                <!-- Procentowy wykres zywych i martwych komorek SVG -->
+                <div class="koloITytul">
+                  <div>
+                    <p>
+                      <b>Kołowy wykres żywych i martwych komórek:</b>
+                    </p>
+                  </div>
+                  <svg id="kolo" viewBox="-1 -1 2 2"></svg>
+                </div>
+                <div>
+                  <svg id="koloPodpisy" xmlns="http://www.w3.org/2000/svg">
+                    <g>
+                      <rect
+                        fill="#ff9900"
+                        width="10"
+                        height="10"
+                        x="25"
+                        y="5"
+                      ></rect>
+                      <text fill="#ff9900" x="40" y="12.5" dy="0.25em">
+                        Żywe
+                      </text>
+                    </g>
+                    <g>
+                      <rect
+                        fill="whitesmoke"
+                        width="10"
+                        height="10"
+                        x="100"
+                        y="5"
+                      ></rect>
+                      <text fill="whitesmoke" x="115" y="12.5" dy="0.25em">
+                        Martwe
+                      </text>
+                    </g>
+                  </svg>
+                </div>
+
+                <!-- Przyciski -->
+                <div class="gameButtonContainer">
+                  <input
+                    type="button"
+                    id="btnReprodukcja"
+                    value="Rozpocznij reprodukcję"
+                    class="gameButtons"
+                    onclick="startStop();"
+                  />
+
+                  <input
+                    type="button"
+                    id="btnRandom"
+                    value="Wylosuj świat"
+                    class="gameButtons"
+                    onclick="wylosujSwiat();"
+                  />
+
+                  <input
+                    type="button"
+                    id="btnReset"
+                    class="gameButtons"
+                    value="Zresetuj świat"
+                    onclick="zresetujSwiat();"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+  </body>
+</html>

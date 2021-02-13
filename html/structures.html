@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rodzaje struktur</title>
+    <link rel="icon" type="image/png" href="../pics/favicon/favicon.png" />
+    <link rel="stylesheet" href="../css/styles.css" />
+
+    <!-- JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/navbar.js"></script>
+  </head>
+  <body>
+    <div class="gradient">
+      <!-- Górny pasek nawigacji -->
+      <div class="navbar"></div>
+
+      <!-- Zasady gry -->
+      <div class="structureContainer">
+        <div class="content">
+          <h4>
+            Gra cechuje się występowaniem powtarzających się struktur, które
+            można podzielić na kilka rodzajów, bazując na ich zachowaniu.
+          </h4>
+        </div>
+
+        <!-- Niezmienne -->
+        <div class="content">
+          <div class="normal">
+            <h4>Struktury niezmienne</h4>
+            <br />
+            <p>
+              Struktury niezmienne (inaczej stabilne lub statyczne) pozostają
+              identyczne bez względu na to jak duża jednostka czasu upłynęła.
+              Oznacza to, że dla każdej żywej komórki spełniony jest warunek
+              przetrwania i dla żadnej spośród martwych warunek nie jest
+              spełniony.<br /><br />
+              Najprostsza taka struktura, czyli klocek (ang. block) składa się z
+              4 żywych komórek. Pojawiają się one bardzo często jako produkty
+              końcowe ewolucji struktur. Tworzy się je stosunkowo prosto.
+              Istnieją również schematy, według których można wymyślać nowe tego
+              typu struktury.
+            </p>
+            <br />
+            <p>Przykłady takich struktur:</p>
+            <br />
+            <div class="flexContainer flexContainer--space-between">
+              <figure>
+                <img src="../pics/structuresPage/Niezmienne/block.png" alt="Klocek" />
+                <figcaption><small>Klocek</small></figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niezmienne/krysztal.png"
+                  alt="Kryształ"
+                />
+                <figcaption><small>Kryształ </small></figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niezmienne/koniczynka.png"
+                  alt="Koniczynka"
+                />
+                <figcaption><small>Koniczynka </small></figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niezmienne/bochenek.png"
+                  alt="Bochenek"
+                />
+                <figcaption><small>Bochenek</small></figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Niezmienne/lodz.png" alt="Łódź" />
+                <figcaption><small>Łódź</small></figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Niezmienne/staw.png" alt="Staw" />
+                <figcaption><small>Staw</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Oscylatory -->
+        <div class="content">
+          <div class="normal">
+            <h4>Oscylatory</h4>
+            <br />
+            <p>
+              Oscylatory, jak sama nazwa wskazuje, oscylują, zatem zmieniają się
+              okresowo, co pewien czas powracają do swojego stanu pierwotnego.
+              Najprostsza taka struktura składa się z trzech żywych komórek
+              położonych w jednym rzędzie (tzw. światła uliczne; ang. blinker).
+            </p>
+            <br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Oscylatory/blinker.gif"
+                  alt="blinker"
+                />
+                <figcaption><small>Światła uliczne</small></figcaption>
+              </figure>
+            </div>
+            <br /><br />
+            <p>
+              Najprostsze z nich dość często pojawiają się jako produkty końcowe
+              ewolucji struktur, podobnie jak struktury niezmienne.<br /><br />
+              Okresy oscylatorów najczęściej przyjmują wartości 2, 3, 4, 6 lub
+              8, choć w grze w życie znaleziono i takie, których okres wynosi
+              prawie 150000.<br /><br />
+              Większość liczb naturalnych może być długościami okresu
+              oscylatora. Wyjątkami są jednak liczby 19, 23, 38, oraz 41. Nie
+              wiadomo, czy oscylatory dla takich długości okresów istnieją, ale
+              jest bardzo prawdopodobne, że tak jest. Warto dodać, że dla
+              okresów 34 i 51 jedyne znane oscylatory składają się z niezależnie
+              działających struktur o okresie 2 lub 3 i 17. Przykładowo
+              oscylator o okresie 34 tworzy się z oscylatorów długości 2 i 17 w
+              takiej odległości, by na siebie nie wpływały. <br /><br />
+            </p>
+            <p>
+              Dla cyklu długości 14 istnieje natomiast tylko jeden oscylator,
+              czyli Fontanna.
+            </p>
+            <br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Oscylatory/fontanna.gif"
+                  alt="fontanna"
+                />
+                <figcaption><small>Fontanna</small></figcaption>
+              </figure>
+            </div>
+
+            <br />
+            <p>Przykłady takich struktur:</p>
+            <br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Oscylatory/beacon.gif"
+                  alt="beacon"
+                />
+                <figcaption><small>Latarnia morska</small></figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Oscylatory/krokodyl.gif"
+                  alt="krokodyl"
+                />
+                <figcaption><small>Krokodyl</small></figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Oscylatory/pulsar.gif"
+                  alt="pulsar"
+                />
+                <figcaption><small>Pulsar</small></figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Oscylatory/toad.gif" alt="żabka" />
+                <figcaption><small>Żabka</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Niestałe -->
+        <div class="content">
+          <div class="normal">
+            <h4>Struktury niestałe</h4>
+            <br />
+            <p>
+              Struktury niestałe zmieniają się, nie powracając nigdy do swojego
+              stanu pierwotnego. Jest to zatem grupa łącząca struktury nie
+              należące do żadnej z pozostałych kategorii. Z tego powodu jest ich
+              najwięcej, a ich uzyskanie nie sprawia większych trudności (losowy
+              układ komórek wprowadzony jako warunki początkowe zwykle okazuje
+              się być strukturą niestałą).
+              <br /><br />
+            </p>
+            <p>
+              Niektóre struktury niestałe mają jednak właściwość ciekawego lub
+              bardzo długiego przebiegu rozwoju. Jedną z cech takich struktur
+              jest stosunek liczby kroków, po których następuje stabilizacja do
+              liczby komórek w stadium początkowym. Stabilizacją nazywamy
+              zamianę na konfigurację układów stabilnych, oscylatorów i statków
+              (zwykle gliderów). Wartość ta oznaczana jest przez literę
+              <b>L</b>. <br /><br />
+            </p>
+            <p>
+              Przykładowo jeden z najbardziej znanych i jednocześnie
+              najprostszych struktur niestałych to R-Pentomino (F-Pentomino)
+              posiadający chaotyczny rozwój aż do 1103 kroku, wykonujący emisję
+              kilkudziesięciu gliderów (L≈221).
+              <br /><br />
+            </p>
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niestale/Rpentomino.png"
+                  alt="R-Pentomino"
+                />
+                <figcaption><small>R-pentomino</small></figcaption>
+              </figure>
+            </div>
+            <br /><br />
+          </div>
+          <p>
+            Najdłużej rozwijające się w struktury niezmienne nazwane są
+            <b>matuzalemami</b> (nazwa pochodzi od Matuzalema, czyli
+            najstarszego człowieka wymienionego w Starym Testamencie, mającego
+            żyć 969 lat). Terminem diehard (ang. die-hard – niereformowalny,
+            oporny na zmiany, długo utrzymujący się przy życiu) natomiast
+            określa się układ, który co prawda znika, ale dopiero po długim
+            czasie.
+          </p>
+
+          <p>Przykłady takich struktur:</p>
+          <br />
+          <div class="biggerImages">
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niestale/diehard.png"
+                  alt="diehard"
+                />
+                <figcaption><small>Diehard</small></figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Niestale/acorn.png" alt="Żołądź" />
+                <figcaption><small>Żołądź</small></figcaption>
+              </figure>
+            </div>
+            <br /><br />
+            <p>
+              Zostało odkrytych również kilka układów nieśmiertelnych, czyli
+              takich, które wykazują nieskończony wzrost. Podane poniżej
+              przykłady tworzą po okresie przejściowym „lokomotywy kładące
+              bloki” (ang. „block-laying switch engine”) o okresie 288 (w
+              wypadku ostatniego układu – dwie lokomotywy).
+            </p>
+            <br /><br />
+
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niestale/Niesmiertelne/10komorek.png"
+                  alt="10komorek"
+                />
+                <figcaption>
+                  <small
+                    >Nieśmiertelny układ o 10 komórkach <br />- najmniejsza
+                    możliwa liczba</small
+                  >
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niestale/Niesmiertelne/kwadrat5x5.png"
+                  alt="kwadrat5x5"
+                />
+                <figcaption>
+                  <small
+                    >Nieśmiertelny układ <br />– mieści się w kwadracie
+                    5x5</small
+                  >
+                </figcaption>
+              </figure>
+            </div>
+            <br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Niestale/Niesmiertelne/lokomotywax2.png"
+                  alt="lokomotywax2"
+                />
+                <figcaption>
+                  <small
+                    >Nieśmiertelny układ – podwójna lokomotywa w jednej
+                    linii</small
+                  >
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Statki -->
+        <div class="content">
+          <div class="normal">
+            <h4>Statki (spaceships)</h4>
+            <br />
+            <p>
+              Statki zwykle zmieniają się okresowo – okresy nie przekraczają
+              jednak najczęściej kilkunastu kroków czasowych a wraz z każdym
+              cyklem przesuwają się o stałą liczbę pól po planszy w określonym
+              kierunku.
+            </p>
+            <br /><br />
+            <p>
+              Najbardziej znanym przykładem takiej struktury, będącym
+              jednocześnie niejako symbolem gry w życie, jest szybowiec (ang.
+              glider).
+            </p>
+            <br /><br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img src="../pics/structuresPage/Statki/glider.gif" alt="glider" />
+                <figcaption><small>Szybowiec (ang. glider)</small></figcaption>
+              </figure>
+            </div>
+            <br /><br />
+            <p><b>Glider</b></p>
+            <br />
+            <p>
+              Przez długi czas po powstaniu gry w życie nie było jasne, czy
+              istnieje jakikolwiek statek, czyli struktura, która mogłaby
+              poruszać się w nieskończoność po planszy. W wyniku ewolucji
+              R-pentomino udało się odnaleźć układ, nazywany po polsku
+              „szybowcem” (ang. glider), który przesuwa się po planszy i nigdy
+              nie kończy swojej podróży.
+            </p>
+            <br /><br />
+            <p>
+              Glider jest najważniejszą strukturą gry w życie, z paru powodów:
+            </p>
+            <ul>
+              <li>
+                wielkie możliwości tworzenia nowych struktur, nawet bardzo
+                złożonych, poprzez zderzanie ich odpowiedniej ilości w
+                odpowiednim względnym położeniu;
+              </li>
+              <li>
+                olbrzymią liczbę struktur (tzw. dział; ang. gun) będących w
+                stanie produkować glidery z różnymi częstotliwościami – tzw.
+                „glider guns”
+              </li>
+              <li>
+                kluczowy udział w niemal każdej strukturze obrazującej pewien
+                algorytm, np. poszukiwaniu liczb pierwszych czy generowaniu
+                liczb pseudolosowych oraz tworzonych tylko dla samego efektu.
+              </li>
+            </ul>
+
+            <p>
+              Glider jest oscylatorem, o okresie długości 4. Może przesuwać się
+              wyłącznie na ukos, pod kątem 45 stopni. Nie istnieją jego
+              modyfikacje, to znaczy, że nie istnieje taki algorytm, który
+              pozwala na dodawanie nowych komórek tak, aby powstające struktury
+              dalej były statkami.
+            </p>
+            <br /><br />
+
+            <p>
+              Glider często powstaje samoczynnie, jako produkt reakcji, w
+              których olbrzymia liczba komórek ewoluuje w chaotyczny sposób.
+            </p>
+            <br /><br />
+            <p><b>Inne statki</b></p>
+            <br />
+            <p>
+              Różnią się one od glidera kierunkiem poruszania się (pion lub
+              poziom, a nie ukos) oraz możliwością modyfikacji – poprzez
+              dodawanie komórek w odpowiedni sposób będziemy uzyskiwać kolejne
+              statki. W zależności od ich wielkości nazywane są LWSS, MWSS, HWSS
+              lub OWSS (skrótowce od Light/Medium/Heavy/Over Weight Space Ship –
+              Lekki/Średni/Ciężki/„Nadciężki” Statek Kosmiczny). Stosuje się też
+              do nich nazwę Dakota z liczbą określającą ich rozmiar.
+            </p>
+            <br /><br />
+            <p>Przykłady takich struktur:</p>
+            <br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img src="../pics/structuresPage/Statki/lwss.gif" alt="LWSS" />
+                <figcaption>
+                  <small>Lekki statek kosmiczny (LWSS)</small>
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Statki/mwss.gif" alt="MWSS" />
+                <figcaption>
+                  <small>Sredni statek kosmiczny (MWSS)</small>
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Statki/hwss.gif" alt="HWSS" />
+                <figcaption>
+                  <small>Ciężki statek kosmiczny (HWSS)</small>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <!-- Działa-->
+        <div class="content">
+          <div class="biggerImages">
+            <h4>Działa (ang. guns)</h4>
+            <br />
+            <p>
+              Działa to oscylatory, które co jeden okres „wyrzucają” z siebie
+              jeden statek, który odłącza się i egzystuje samodzielnie.
+              Najwięcej dział generuje glidery, poza tym część jest zdolna do
+              wytwarzania statków kosmicznych. <br />Długość okresu tych
+              struktur waha się od 30 (najprostszy Gosper Glider Gun) aż do
+              kilkudziesięciu tysięcy kroków czasowych. Ze względu na fakt, że
+              są to formy bardzo zaawansowane (od stu do nawet kilku tysięcy
+              żywych komórek), ich tworzenie jest zwykle bardzo czasochłonne i
+              wymaga praktyki.
+            </p>
+            <br /><br />
+            <p>Najbardziej znane i najprostsze działa to:</p>
+            <br /><br />
+            <p>Gosper Glider Gun</p>
+            <br /><br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img src="../pics/structuresPage/Guns/gosper.svg" alt="gosper" />
+                <figcaption>
+                  <small>Gosper Glider Gun - schemat</small>
+                </figcaption>
+              </figure>
+
+              <figure>
+                <img src="../pics/structuresPage/Guns/gosper.gif" alt="gosper" />
+                <figcaption>
+                  <small>Gosper Glider Gun - animacja</small>
+                </figcaption>
+              </figure>
+            </div>
+            <br />
+            <p>
+              Simkin Glider Gun
+              <br /><br />
+            </p>
+
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img
+                  src="../pics/structuresPage/Guns/simkin.svg"
+                  style="width: 346.69px; height: 200px"
+                  alt="simkin"
+                />
+                <figcaption>
+                  <small>Simkin Glider Gun - schemat</small>
+                </figcaption>
+              </figure>
+            </div>
+
+            <br /><br />
+            <p>
+              <b>Puffery<br /><br /></b>
+            </p>
+
+            <p>
+              Inaczej puffer trainy, czyli dymiące pociągi. Struktury oscylujące
+              (o okresie zwykle w okolicach kilkunastu kroków) oraz poruszające
+              się po planszy, a przy tym pozostawiające za sobą cyklicznie inne
+              struktury, które odłączają się i egzystują samodzielnie.
+              <br /><br />
+            </p>
+
+            <p>
+              Najprostsze puffery (składają się one już z dwudziestu kilku
+              żywych komórek) – zostawiają za sobą statki lub chaotyczny,
+              stabilny pas, tzw. ruiny (debris). Bardziej złożone potrafią
+              zostawiać oscylatory, działa czy nawet inne puffery. Powszechnie
+              stosowaną metodą tworzenia prostych pufferów jest odpowiednie
+              składanie MWSS-ów oraz niewielkiej struktury niestałej.
+              <br /><br />
+            </p>
+
+            <p>
+              Puffery są najbardziej efektownymi strukturami gry w życie.
+              Przykładowo, mają one możliwość przeprowadzenia algorytmu
+              wyznaczającego liczby pierwsze. Jednocześnie, ich tworzenie jest
+              tak trudne, że nawet doświadczeni informatycy traktują je jako
+              wymagające nie lada poświęcenia. Wpływa na to między innymi fakt,
+              że niektóre z tych struktur mają po 5000 komórek żywych w stadium
+              początkowym. Do tej pory wynaleziono około setki pufferów.
+              <br /><br />
+            </p>
+
+            <p>
+              Puffera, który zostawia za sobą statki, nazywamy rake'iem (ang.
+              grabie, hulaka). Najprostszy rake składa się z 2 LWSS-ów i
+              B-Heptomina, w skład wszystkich innych również wchodzą WSS-y.
+              Najbardziej złożona struktura tego typu, Spider-Rake, składa się z
+              około 1000 komórek w pierwotnym stadium. Istnieje kilkadziesiąt
+              odkrytych rake'ów.
+            </p>
+            <br /><br />
+
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img src="../pics/structuresPage/Guns/puffer.gif" alt="puffer" style="height: 200px;"/>
+                <figcaption><small>Dymiący pociąg (puffer)</small></figcaption>
+              </figure>
+            </div>
+
+            <br /><br />
+            <p><b>Breedery (ang. rozpłodnik, hodowca)</b></p>
+            <br />
+            <p>
+              To puffery o bardzo złożonym zachowaniu. Breedery pozostawiają za
+              sobą działa lub nawet inne puffery, jednak jedynym warunkiem
+              określającym czy dany puffer jest breederem, jest kwadratowy
+              przyrost w czasie populacji jego żywych komórek.
+            </p>
+            <br /><br />
+            <p>
+              Zachowanie breederów przebiega zwykle w ten sposób: „czoło”, a
+              więc oscylująca i produkująca nowe obiekty część puffera, wysyła w
+              różnych kierunkach statki, które zderzając się, tworzą strukturę
+              niezmienną. Następnie, zwykle po kilkudziesięciu krokach, wskutek
+              zderzeń struktur niezmiennych z gliderami tworzy się działo. W
+              takim razie, skoro co pewien okres czoło wytwarza działo, a każde
+              z dział tworzy statek – przyrost populacji wyraża się funkcją
+              kwadratową. Breedery są najtrudniejszymi i najbardziej
+              skomplikowanymi (po kilka tysięcy komórek w stadium początkowym)
+              strukturami gry w życie. Jak do tej pory, wynaleziono ich
+              kilkanaście.
+            </p>
+            <br /><br />
+            <div class="flexContainer flexContainer--centered">
+              <figure>
+                <img src="../pics/structuresPage/Guns/breeder.gif" alt="breeder" style="height: 200px; width: 400px;"/>
+                <figcaption><small>Przykład breedera</small></figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+
+        <div class="content">
+          Warto zwrócić uwagę, że istnieją różne złożone struktury, ale mimo to
+          większość z nich po najdrobniejszym zakłóceniu praktycznie zawsze
+          rozpada się, stabilizując się w sposób podobny do losowych układów.
+        </div>
+        <br />
+      </div>
+    </div>
+  </body>
+</html>
